@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Navigation() {
-    return (
-        <div className="navigation-container">
-            nav
-        </div>
-    )
+  return <div className="navigation-container">aas</div>;
 }

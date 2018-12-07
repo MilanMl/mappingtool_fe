@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import { HomePage, AboutPage, NotFoundPage } from './pages'
 import { Navigation } from './components/shared'
 
-
 class App extends Component {
   render() {
     return (

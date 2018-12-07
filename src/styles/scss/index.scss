@@ -1,0 +1,29 @@
+$blue-1: #f0f3fa;
+$blue-2: #cbdfff;
+$blue-3: #a9c9fd;
+$blue-4: #437bd4;
+$red: #e80606;
+$white: #fff;
+$black: #000;
+$grey-1:#dbdbdb;
+$grey-2: #4e4e4e;
+$orange: #f79618;
+$green: #24ad5d;
+$menu-height: 60px;
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: $blue-1;
+    font-family: 'Lato', sans-serif;
+    color: $grey-2;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}

@@ -1,7 +1,3 @@
-import {
-	BRANCH_DETAIL_LOADED
-} from './actionTypes'
+import { BRANCH_DETAIL_LOADED } from './actionTypes'
 
-export function setBranchLoadStatus(isLoaded) {
-
-}
+export function setBranchLoadStatus(isLoaded) {}

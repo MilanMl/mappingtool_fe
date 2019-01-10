@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { HomePage, AboutPage, NotFoundPage } from './pages'
-import { Navigation } from './components/shared'
-import { CONSTANTS } from './constants'
+import { LoginPage, NotFoundPage } from './pages/'
+import MappingTool from './MappingTool'
+import AuthorizationWrapper from './AuthorizationWrapper'
 
-class App extends Component {
+export default class App extends Component {
 	render() {
 		return (
-			<div className='app-container'>
-				<Navigation links={CONSTANTS.NAV_LINKS} />
-				<Switch>
-					<Route exact path='/' component={HomePage} />
-					<Route path='/about' component={AboutPage} />
-					<Route component={NotFoundPage} />
-				</Switch>
-			</div>
+			<Switch>
+				<Route path='/login' component={LoginPage} />
+				<Route
+					path='/app'
+					component={AuthorizationWrapper(['loggedUser', 'admin'])(MappingTool)}
+				/>
+				<Route component={NotFoundPage} />
+			</Switch>
 		)
 	}
 }
-
-export default App

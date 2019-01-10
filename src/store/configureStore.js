@@ -1,11 +1,17 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import { combineReducers } from 'redux'
-
-import { AppReducer } from '../reducers/appReducer'
+import { AppReducer } from '../reducers/AppReducer'
+import { ServiceListReducer } from '../reducers/ServiceListReducer'
+import { ServiceDetailReducer } from '../reducers/ServiceDetailReducer'
+import { NavigationReducer } from '../reducers/NavigationRedurer'
+import { VersionReducer } from '../reducers/VersionReducer'
 
 const applicationReducers = combineReducers({
-	AppReducer
+	AppReducer,
+	ServiceListReducer,
+	ServiceDetailReducer,
+	NavigationReducer,
+	VersionReducer
 })
 
 const initialState = {}
@@ -14,5 +20,4 @@ const store = createStore(
 	initialState,
 	applyMiddleware(thunk)
 )
-
 export default store
